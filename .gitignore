@@ -1,0 +1,5 @@
+*/
+!User/
+
+User/Package Control.*
+!User/Package Control.sublime-settings

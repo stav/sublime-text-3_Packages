@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: cURL
+file_extensions: [curl]
+scope: source.curl
+
+contexts:
+  main:
+    - match: ^>\s+.*$
+      scope: entity.name.function
+    - match: ^<\s+.*$
+      scope: support.type.asm

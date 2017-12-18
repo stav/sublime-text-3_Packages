@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"Hugofy",
+		"INI",
+		"MoveTab",
+		"Package Control",
+		"PackageDev",
+		"Pretty JSON",
+		"Python Pretty Print",
+		"Theme - SoDaReloaded",
+		"TOML",
+		"TrailingSpaces",
+		"Vue Syntax Highlight"
+	]
+}

@@ -1,0 +1,5 @@
+<snippet>
+    <content><![CDATA[import pudb; pu.db]]></content>
+    <tabTrigger>pudb</tabTrigger>
+    <scope>source.python</scope>
+</snippet>

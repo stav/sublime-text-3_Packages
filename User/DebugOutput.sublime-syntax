@@ -1,0 +1,57 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: Debug Output
+file_extensions:
+  - dout
+scope: source.dout
+contexts:
+  main:
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character
+    - match: '"'
+      scope: punctuation.definition.string.begin.dout
+      push: double_quoted_string
+
+    - match: "'"
+      scope: punctuation.definition.string.begin.dout
+      push: single_quoted_string
+
+    # Keywords are if, else for and while.
+    # Note that blackslashes don't need to be escaped within single quoted
+    # strings in YAML. When using single quoted strings, only single quotes
+    # need to be escaped: this is done by using two single quotes next to each
+    # other.
+    - match: '\b(Link|stav)(?=\()'
+      scope: keyword.control.dout
+
+    # Parameters
+    - match: '\w+(?=\=)'
+      scope: variable.parameter
+
+    # Response
+    - match: '<([\d]+)\s([^]]+?)>'
+      scope: constant.other
+      captures:
+        1: variable.parameter
+        2: entity.name.class
+
+    # Numbers
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric.dout
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double.dout
+    - match: '\\.'
+      scope: constant.character.escape.dout
+    - match: '"'
+      scope: punctuation.definition.string.end.dout
+      pop: true
+
+  single_quoted_string:
+    - meta_scope: string.quoted.single.dout
+    - match: '\\.'
+      scope: constant.character.escape.dout
+    - match: "'"
+      scope: punctuation.definition.string.end.dout
+      pop: true

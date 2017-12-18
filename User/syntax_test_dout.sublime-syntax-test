@@ -1,0 +1,9 @@
+// SYNTAX TEST "DebugOutput.sublime-syntax"
+
+@@@@@@@ 1 <200 http://www.example.com/>
+// <- source.dout
+//        ^ constant.other
+
+@@@@@@@ 2 Link(url='http://www.example.com/', text='Example', fragment='', nofollow=False)
+//        ^ keyword.control.dout
+//             ^ variable.parameter

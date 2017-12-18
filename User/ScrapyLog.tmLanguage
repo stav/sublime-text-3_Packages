@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>slog</string>
+	</array>
+	<key>name</key>
+	<string>Scrapy Log</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>date-time [logger] level</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.attribute-name</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>(Scrapy 1.1.0dev1)</string>
+			<key>match</key>
+			<string>\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2} \[([^\]]+)\] ([A-Z]+):\s</string>
+			<key>name</key>
+			<string>support.constant</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>date-time level [logger]</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.attribute-name</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>(Scrapy 1.0.1.post1+g5b8c9e5)</string>
+			<key>match</key>
+			<string>\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2} ([A-Z]+) \[([^\]]+)\]</string>
+			<key>name</key>
+			<string>support.constant</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Request</string>
+			<key>match</key>
+			<string>&lt;([A-Z]+)\s([^]]+?)&gt;</string>
+			<key>name</key>
+			<string>constant.other</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Response</string>
+			<key>match</key>
+			<string>&lt;([\d]+)\s([^]]+?)&gt;</string>
+			<key>name</key>
+			<string>constant.other</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.slog</string>
+	<key>uuid</key>
+	<string>030ae93f-5fcf-4bbd-8caa-81fcdcf77ec3</string>
+</dict>
+</plist>

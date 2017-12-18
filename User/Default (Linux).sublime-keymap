@@ -1,0 +1,7 @@
+[
+    { "keys": ["ctrl+shift+s"], "command": "save_all" },
+    { "keys": ["ctrl+shift+t"], "command": "delete_trailing_spaces" },
+    { "keys": ["ctrl+shift+w"], "command": "close_all" },
+    { "keys": ["ctrl+alt+j"], "command": "pretty_json"},
+	{ "keys": ["ctrl+alt+m"], "command": "run_macro_file", "args": {"file": "res://Packages/User/stav-test.sublime-macro"}, "context": [] }
+]

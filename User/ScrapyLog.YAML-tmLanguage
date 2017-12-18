@@ -1,0 +1,39 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Scrapy Log
+scopeName: source.slog
+fileTypes: [slog]
+uuid: 030ae93f-5fcf-4bbd-8caa-81fcdcf77ec3
+
+patterns:
+
+- comment: date-time [logger] level
+- comment: (Scrapy 1.1.0dev1)
+  name: support.constant
+  match: \d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2} \[([^\]]+)\] ([A-Z]+):\s
+  captures:
+    '1': {name: entity.other.attribute-name}
+    '2': {name: entity.name.tag}
+
+- comment: date-time level [logger]
+- comment: (Scrapy 1.0.1.post1+g5b8c9e5)
+  name: support.constant
+  match: \d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2} ([A-Z]+) \[([^\]]+)\]
+  captures:
+    '1': {name: entity.name.tag}
+    '2': {name: entity.other.attribute-name}
+
+- comment: Request
+  name: constant.other
+  match: <([A-Z]+)\s([^]]+?)>
+  captures:
+    '1': {name: variable.parameter}
+    '2': {name: string}
+
+- comment: Response
+  name: constant.other
+  match: <([\d]+)\s([^]]+?)>
+  captures:
+    '1': {name: variable.parameter}
+    '2': {name: entity.name.class}
+...
